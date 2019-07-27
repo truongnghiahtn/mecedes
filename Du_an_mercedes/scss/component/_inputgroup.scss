@@ -1,0 +1,22 @@
+.stay_info {
+    .input-group {
+        width: 90%;
+        input {
+            border-radius: 0px;
+            background-color: $color-black-1;
+            border: none;
+            color: $color-white-0;
+            &::placeholder {
+                color: $color-white-0;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        .input-group-text {
+            color: $color-black-4;
+            background: linear-gradient(to bottom, $color-black-1, #0b0b0b);
+            border: none;
+        }
+    }
+}

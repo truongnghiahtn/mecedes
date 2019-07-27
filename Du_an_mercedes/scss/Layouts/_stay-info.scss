@@ -1,0 +1,84 @@
+    .stay_info {
+        padding: 30px 0;
+        p {
+            @include text($fs-0, $fw-normal, $color-black-4);
+        }
+        .content {
+            width: 95%;
+            margin: 0 auto;
+            .stay_info-title {
+                h1 {
+                    @include text($fs-3, $fw-normal, $color-white-0);
+                    line-height: 35px;
+                    padding: 30px 0;
+                    position: relative;
+                    &::before {
+                        content: '';
+                        width: 70px;
+                        height: 2px;
+                        background-color: $color-white-0;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        z-index: 100;
+                    }
+                    &::after {
+                        content: '';
+                        width: 100%;
+                        height: 1px;
+                        background-color: $color-black-2;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0;
+                        z-index: 100;
+                    }
+                }
+            }
+            .stay_info-bot {
+                padding: 30px 0;
+                .stay_info-left {
+                    span {
+                        @include text($fs-0, $fw-normal, $color-black-4);
+                        a {
+                            text-decoration: none;
+                            @include text($fs-0, $fw-normal, $color-black-4);
+                            transition: all 0.5s;
+                            &:hover {
+                                color: $color-blue-0;
+                            }
+                        }
+                        i {
+                            margin: 0 2px 0 5px;
+                        }
+                    }
+                }
+                .stay_info-right {
+                    .icon-item {
+                        position: relative;
+                        display: inline;
+                        i {
+                            margin: 0 20px;
+                            font-size: 25px;
+                            color: $color-black-3;
+                            cursor: pointer;
+                            &:hover+span {
+                                opacity: 1;
+                            }
+                        }
+                        span {
+                            position: absolute;
+                            z-index: 100;
+                            bottom: -30px;
+                            left: 0;
+                            @include text($fs-0, $fw-normal, $color-black-1);
+                            padding: 2px 2px;
+                            background-color: $color-white-1;
+                            opacity: 0;
+                            transition: all 0.3s;
+                            transition-delay: 0.5s;
+                        }
+                    }
+                }
+            }
+        }
+    }

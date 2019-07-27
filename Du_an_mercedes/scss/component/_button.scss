@@ -1,0 +1,15 @@
+.myslider {
+    .learnmore {
+        @include btn($color-white-1, $color-black-2, $fs-1, $fw-normal, 40px, 120px, $color-white-0, $color-black-0);
+        margin-top: 20px;
+        opacity: 0;
+    }
+}
+
+.welcome {
+    .localwebsite {
+        @include btn($color-white-1, $color-blue-0, $fs-1, $fw-normal, 40px, 240px, $color-white-0, $color-blue-1);
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+}

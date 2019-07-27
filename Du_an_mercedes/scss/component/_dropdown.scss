@@ -1,0 +1,44 @@
+.tab-content {
+    .btn-showmore {
+        @include btn($color-black-4, $color-black-1, $fs-1, $fw-normal, 35px, 120px, $color-white-0, $color-black-1);
+        margin: 0px auto;
+        margin-top: 50px;
+        &:focus {
+            border: none;
+            outline-color: none;
+        }
+        &:hover {
+            i {
+                animation: fadeInDown 1.5s infinite;
+                color: $color-blue-0;
+            }
+        }
+    }
+    .btn-hiddenmore {
+        @include btn($color-black-4, $color-black-1, $fs-1, $fw-normal, 35px, 120px, $color-white-0, $color-black-1);
+        margin: 0px auto;
+        margin-top: 50px;
+        &:focus {
+            border: none;
+            outline-color: none;
+        }
+        &:hover {
+            i {
+                animation: fadeInUp 1.5s infinite;
+                color: $color-blue-0;
+            }
+        }
+    }
+}
+
+#more,
+#more1,
+#more2 {
+    display: block;
+}
+
+#hidden,
+#hidden1,
+#hidden2 {
+    display: none;
+}

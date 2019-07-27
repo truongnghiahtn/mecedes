@@ -1,0 +1,31 @@
+@mixin repond-to($breakpoint) {
+    @if map-has-key($map: $breakpoints, $key: $breakpoint) {
+        $value: map-get($map: $breakpoints, $key: $breakpoint);
+        @media screen and(max-width: $value) {
+            @content;
+        }
+    }
+    @else {
+        @warn"bien nay khong ton tai";
+    }
+}
+
+@mixin text($fs, $fw, $color) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $color;
+}
+
+@mixin btn($color, $bg-color, $fs, $fw, $heght, $width, $hover-color, $hover-bg-color) {
+    color: $color;
+    background-color: $bg-color;
+    font-size: $fs;
+    font-weight: $fw;
+    border: none;
+    height: $heght;
+    width: $width;
+    &:hover {
+        color: $hover-color;
+        background-color: $hover-bg-color;
+    }
+}

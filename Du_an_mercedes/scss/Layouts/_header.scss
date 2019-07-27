@@ -1,0 +1,38 @@
+.header {
+    background-color: $color-black-0;
+    height: 100px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    a {
+        color: $color-white-0;
+    }
+    .mynavbar {
+        width: 95%;
+        margin: 0 auto;
+        .brand {
+            .brand-2 {
+                position: absolute;
+                top: 30px;
+                left: 150px;
+            }
+        }
+        .top {
+            margin-top: -10px;
+        }
+        .bot {
+            margin-top: 15px;
+        }
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    margin: 0 10px;
+                    transition: all 0.5s;
+                    &:hover {
+                        color: $color-blue-0;
+                    }
+                }
+            }
+        }
+    }
+}

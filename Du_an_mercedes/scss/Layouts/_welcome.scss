@@ -1,0 +1,40 @@
+.welcome {
+    padding-top: 70px;
+    height: 470px;
+    .content {
+        width: 88%;
+        margin: auto;
+        .mytitle {
+            h1 {
+                @include text($fs-3, $fw-normal, $color-white-0);
+                padding: 15px 0;
+                &::before {
+                    content: '';
+                    width: 70px;
+                    height: 3px;
+                    background-color: $color-white-0;
+                    position: absolute;
+                    top: -10px;
+                    left: 15px;
+                    z-index: 100;
+                }
+            }
+            p {
+                @include text($fs-0, $fw-normal, $color-white-0);
+            }
+        }
+        .list-welcome {
+            .item {
+                padding: 0 8px;
+                .img {
+                    img {
+                        transition: all 0.2s;
+                        &:hover {
+                            border-bottom: 7px solid $color-blue-0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

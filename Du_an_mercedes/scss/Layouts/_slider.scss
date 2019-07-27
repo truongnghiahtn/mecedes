@@ -1,0 +1,102 @@
+.myslider {
+    .content {
+        padding-top: 100px;
+        .carousel-item {
+            position: relative;
+            .detail-slider {
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                transform: translateX(-80%);
+                width: 50%;
+                h1 {
+                    @include text($fs-5, $fw-normal, $color-white-0);
+                    opacity: 0;
+                    position: relative;
+                    &::before {
+                        content: '';
+                        width: 70px;
+                        height: 3px;
+                        background-color: $color-white-0;
+                        position: absolute;
+                        top: -30px;
+                        left: 0px;
+                        z-index: 100;
+                    }
+                }
+            }
+            &.active {
+                .detail-slider {
+                    h1 {
+                        opacity: 1;
+                        animation: fadeInDown 1.5s ease;
+                        animation-delay: 0.5;
+                    }
+                    .learnmore {
+                        opacity: 1;
+                        animation: fadeInDown 2s ease;
+                        animation-delay: 0.5;
+                    }
+                }
+                p {
+                    opacity: 1;
+                    animation: fadeInDown 2s ease;
+                    animation-delay: 0.5;
+                }
+            }
+            p {
+                position: absolute;
+                bottom: 20px;
+                left: 50px;
+                @include text($fs-0, $fw-normal, $color-white-0);
+                opacity: 0;
+            }
+        }
+        .carousel-item:nth-child(3) {
+            .detail-slider {
+                h1 {
+                    &::before {
+                        background-color: $color-black-0;
+                    }
+                }
+            }
+        }
+        .carousel-control-prev {
+            width: 30px;
+            height: 30px;
+            margin-top: 275px;
+            margin-left: 50px;
+            font-size: 30px;
+            transition: all 0.5s;
+        }
+        .carousel-control-next {
+            width: 30px;
+            height: 30px;
+            margin-top: 275px;
+            margin-right: 50px;
+            font-size: 30px;
+        }
+        .content-icon {
+            position: fixed;
+            z-index: 100;
+            top: 250px;
+            right: -135px;
+            .item {
+                background-color: $color-black-1;
+                color: $color-white-0;
+                margin: 1px 0;
+                height: 40px;
+                padding: 5px;
+                font-size: 20px;
+                cursor: pointer;
+                i {
+                    margin-right: 20px;
+                }
+                transition: all 1s;
+                &:hover {
+                    transform: translateX(-135px)
+                }
+            }
+        }
+    }
+}
